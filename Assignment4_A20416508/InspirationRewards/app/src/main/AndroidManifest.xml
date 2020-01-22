@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.inspirationrewards">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:roundIcon="@drawable/logo"
+        android:label="@string/app_name"
+
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".AwardActivity"></activity>
+        <activity
+            android:name=".InspirationLeaderboard"
+            android:parentActivityName=".YourProfile">
+            <meta-data
+                android:name=".YourProfile"
+                android:value="android.support.PARENT_ACTIVITY" />
+        </activity>
+        <activity
+            android:name=".EditProfile"
+            android:parentActivityName=".YourProfile">
+            <meta-data
+                android:name=".YourProfile"
+                android:value="android.support.PARENT_ACTIVITY" />
+
+        </activity>
+        <activity
+            android:name=".ProfileActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name=".MainActivity"
+                android:value="android.support.PARENT_ACTIVITY" />
+        </activity>
+        <activity android:name=".YourProfile" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
